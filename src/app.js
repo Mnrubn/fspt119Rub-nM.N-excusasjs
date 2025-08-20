@@ -10,18 +10,18 @@ let action = ['ate', 'peed', 'crushed', 'broke'];
 let what = ['my homework', 'my phone', 'the car'];
 let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-function getrandomnumber (a, b) {
-  return Math.floor(Math.random () * (b-a) +a);
+function getrandomnumber(a, b) {
+  return Math.floor(Math.random() * (b - a) + a);
 }
 
-function getrandom (arr) {
+function getRandomElement(arr) {
   let max = arr.length;
   let min = 0;
-  let random = getrandomnumber (min, max);
-  return arr [random];
+  let random = getrandomnumber(min, max);
+  return arr[random];
 }
-window.onload = function() {
-  //write your code here
+window.onload = function () {
+
   console.log("Hello Rigo from the console!");
-  document.getElementById('excuse').innerHTML = getrandom (who) + " " + getrandom (action) + " " + getrandom (what) + " " + getrandom (when)
+  document.getElementById('excuse').innerHTML = `${getRandomElement(who)} ${getRandomElement(action)} ${getRandomElement(what)} ${getRandomElement(when)}`;
 };
